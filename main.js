@@ -1,5 +1,6 @@
 
 console.log("Starting program");
+var numOfUsers = 10
 main();
 
 /*add a user*/
@@ -21,10 +22,19 @@ function createMultArray(sizeOfArray,sizeOfSecondArray)
   return array;
 }
 
-
+/*Add more users to the array*/
 function addingNewUsers(users)
 {
-  
+  var newArray = [[ "Timika", "Lewter", 45 ],
+  ["Kyoko", "Cremer", 56],  
+  ["Everette", "Valerio", 14],  
+  ["Jeremiah", "Rall", 19]];  
+
+  for(var i =1; i<5;i++)
+  {
+    users[i] = newArray[i-1];
+  }
+
 }
 
 function main()
@@ -39,13 +49,13 @@ function main()
   console.log(user);
 
   /*create array of new users */
-  var users = createMultArray(100,3);
+  var users = createMultArray(numOfUsers,3);
   /*Add jason to the list*/
   users[0] = user;
   console.log(users);
 
   addingNewUsers(users);
-
+  console.log(users);
 
 
 
