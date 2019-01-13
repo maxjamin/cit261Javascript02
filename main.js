@@ -1,70 +1,56 @@
 
+console.log("Starting program");
+main();
 
-console.log("starting test...");
-
-var numberOfUsers = 15;
-var maxAdditionOfUsers = 10;
-var AverageAge = 27;
-
-/*if statements*/
-if(numberOfUsers < 100)
+/*add a user*/
+function GetUsersInformation(user)
 {
-	console.log("The numberOfUsers is too low")
+  return user = ["Jason", "Bourn", 45];
 }
 
-/*Add some additional users*/
-for(i=0; i < maxAdditionOfUsers; i++)
+/*Creating two dimensional array*/
+function createMultArray(sizeOfArray,sizeOfSecondArray)
 {
-	numberOfUsers += 1;
+  var array = [];
+
+  for (var i=0;i< sizeOfArray;i++)
+  {
+      array[i] = new Array(sizeOfSecondArray);
+  }
+
+  return array;
 }
-console.log( "The additional users + base : ", numberOfUsers);
 
 
-if(numberOfUsers >= 20 && AverageAge < 30)
+function addingNewUsers(users)
 {
-	console.log("We have a large younge user base!");
+  
 }
 
-var day;
-switch(new Date().getDay()) {
-  	case 0:
-    	text = "Sunday";
-    	break;
-  	case 1:
-    	text = "Monday";
-    	break;
-  	case 2:
-    	text = "Tuesday";
-    	break;  
-  	case 3:
-    	text = "Wednsday";
-    	break;
-    case 4:
-    	text = "Thursday";
-    	break;
-	case 5:
-    	text = "Friday";
-    	break;
-	case 6:
-    	text = "Saturday";
-    	break;
-}
-console.log("Today is",text);
+function main()
+{
+  console.log("in main");
+  var age = 0;
+  var user = ["FirstName", "LastName", age];
+  var SizeOfUser = 3;
 
-var clicks =0;
 
-do{
-	console.log("Hit q for exit. ")
-	clicks++;
+  user = GetUsersInformation(user);
+  console.log(user);
+
+  /*create array of new users */
+  var users = createMultArray(100,3);
+  /*Add jason to the list*/
+  users[0] = user;
+  console.log(users);
+
+  addingNewUsers(users);
+
+
+
+
 
 }
-while(clicks < 13);
-
-console.log("Number of clicks" , clicks, "\n\n");
-
-console.log("end of program");
-
-
 
 
 
